@@ -1,16 +1,16 @@
-import logo from './logo.svg';
+import { QueryClientProvider, QueryClient } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
 import './App.css';
-import Header from './components/Header';
 import Main from './components/Main';
-import Footer from './components/Footer';
 
 function App() {
+  const queryClient = new QueryClient();
+
   return (
-    <div className="App">
-      <Header />
+    <QueryClientProvider client={queryClient}>
       <Main />
-      <Footer />
-    </div>
+      <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
+    </QueryClientProvider>
   );
 }
 
