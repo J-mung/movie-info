@@ -59,6 +59,7 @@ body {
 
 #user_feedback {
   font-size: 10px;
+  color: red;
 }
 
 #sign_up_btn {

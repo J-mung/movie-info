@@ -4,6 +4,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import LoginField from '../component/LoginField';
 import Valid from './../component/Valid';
+import PasswordField from './../component/PasswordField';
 
 const LoginScreen = () => {
   const [userId, setUserId] = React.useState('');
@@ -52,8 +53,7 @@ const LoginScreen = () => {
           onChange={handleChangeId}
           child={<AiOutlineUser className="login_field_icon" size={30} />}
         />
-        <LoginField
-          type={'password'}
+        <PasswordField
           id={'pw_input'}
           placeholder={'Password'}
           onChange={handleChangePw}

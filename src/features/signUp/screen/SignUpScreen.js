@@ -74,7 +74,11 @@ const SignUpScreen = () => {
           child={<AiOutlineUserAdd className="sign_up_field_icon" size={30} />}
         />
 
-        {isValid !== '' ? <p style={{ color: 'red' }}>{isValid}</p> : <></>}
+        {isValid !== '' ? (
+          <p style={{ color: 'red', fontSize: 10 }}>{isValid}</p>
+        ) : (
+          <></>
+        )}
         <input type="submit" value="Sign Up" />
       </form>
     </div>
