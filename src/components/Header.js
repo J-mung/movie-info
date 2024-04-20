@@ -1,7 +1,10 @@
+import '../css/Header.css';
 const Header = () => {
   return (
     <div className="header">
-      <h1>this is header</h1>
+      <div className="header_title">
+        <h1>Movie Info</h1>
+      </div>
     </div>
   );
 };
