@@ -37,6 +37,10 @@ const LoginScreen = () => {
     }
   };
 
+  const onClickSignUp = () => {
+    navigate('/signUp');
+  };
+
   return (
     <div className="login_container">
       <h2>login</h2>
@@ -60,6 +64,9 @@ const LoginScreen = () => {
 
         <input type="submit" value="Login" />
       </form>
+      <button id="sign_up_btn" onClick={onClickSignUp}>
+        Sign Up
+      </button>
     </div>
   );
 };

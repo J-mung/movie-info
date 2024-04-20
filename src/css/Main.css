@@ -1,5 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .main {
-  display: flex;
+  height: auto;
   min-height: 100vh;
+  display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.main_router {
+  flex: 1;
+  overflow-y: auto;
 }

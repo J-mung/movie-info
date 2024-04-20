@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 
-const LoginField = ({ type, id, placeholder, onChange, child }) => {
+const SignUpField = ({ type, id, placeholder, onChange, child }) => {
   return (
-    <div className="login_field">
+    <div className="sign_up_field">
       <label htmlFor={id} style={{ marginTop: 10, marginRight: 5 }}>
         {child}
       </label>
@@ -16,7 +16,7 @@ const LoginField = ({ type, id, placeholder, onChange, child }) => {
   );
 };
 
-LoginField.propTypes = {
+SignUpField.propTypes = {
   type: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
@@ -24,4 +24,4 @@ LoginField.propTypes = {
   child: PropTypes.node.isRequired
 };
 
-export default LoginField;
+export default SignUpField;
