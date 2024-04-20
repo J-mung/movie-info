@@ -1,8 +1,8 @@
-import Home from '../screens/Home';
+import Home from '../features/Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
-import Login from '../screens/login';
+import Login from '../features/login';
 import '../css/Main.css';
 
 const Main = () => {
