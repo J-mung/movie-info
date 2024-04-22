@@ -5,11 +5,14 @@ import { useNavigate } from 'react-router-dom';
 import LoginField from '../component/LoginField';
 import Valid from './../component/Valid';
 import PasswordField from './../component/PasswordField';
+import { useUserContext } from '../../../contexts/UserContext';
 
 const LoginScreen = () => {
   const [userId, setUserId] = React.useState('');
   const [userPw, setUserPw] = React.useState('');
   const [isSubmit, setIsSubmit] = React.useState(false);
+
+  const { setUser } = useUserContext();
 
   const handleChangeId = (e) => {
     console.log('onChange Email: ', e.target.value);
@@ -31,8 +34,8 @@ const LoginScreen = () => {
     console.log('Password: ', userPw);
 
     if (userId === 'test@test.com' && userPw === '1234') {
-      navigate('/home');
       setIsSubmit(false);
+      setUser(userId);
     } else {
       console.log('로그인 정보를 다시 확인해 주세요.');
     }

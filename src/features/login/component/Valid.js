@@ -4,7 +4,7 @@ const Valid = ({ userId, userPw }) => {
 
   const isLoginValid = () => {
     if (userId === '' && userPw === '') {
-      return '';
+      return '로그인 정보를 입력해주세요.';
     } else if (userId !== email) {
       return 'Email을 확인해 주세요.';
     } else if (userPw !== password) {

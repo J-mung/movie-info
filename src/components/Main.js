@@ -5,19 +5,29 @@ import Footer from './Footer';
 import Login from '../features/login';
 import '../css/Main.css';
 import SignUp from './../features/signUp/index';
+import { useUserContext } from '../contexts/UserContext';
 
 const Main = () => {
+  const { user } = useUserContext();
+
   return (
     <div className="main">
       <Header />
       <div className="main_router">
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Login />} />
-            <Route path="/signUp" element={<SignUp />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/detail" element={<p1></p1>} />
-            <Route path="/setting" element={<p1>this is setting</p1>} />
+            {user ? (
+              <>
+                <Route path="/" element={<Home />} />
+                <Route path="/detail" element={<p1></p1>} />
+                <Route path="/setting" element={<p1>this is setting</p1>} />
+              </>
+            ) : (
+              <>
+                <Route path="/" element={<Login />} />
+                <Route path="/signup" element={<SignUp />} />
+              </>
+            )}
           </Routes>
         </BrowserRouter>
       </div>
